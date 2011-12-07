@@ -1,9 +1,19 @@
 CFLAGS = -g
 
-test_crazy: test_crazy.c
+APP1 = 	test_crazy
+APP2 =	test_crazy2
+
+APPS = ${APP1} ${APP2}
+
+all: ${APPS}
+
+${APP1}: ${APP1}.c
+
+${APP2}: ${APP2}.c
 
 run:
-	./test_crazy
+	@./${APP1}
+	@./${APP2}
 
 clean:
-	rm -f test_crazy
+	rm -f ${APPS}

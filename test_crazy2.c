@@ -23,7 +23,7 @@ int main() {
 
   for( i = 0; i < ARR_SIZE; ++i)
     arr[i] = i+5;
-  puts("Test 1");
-  printf("%d",*((int*)arr[0]));
+  puts("Test 2");
+  printf("%d",**((int**)&arr[0]));
   return 0;
 }
